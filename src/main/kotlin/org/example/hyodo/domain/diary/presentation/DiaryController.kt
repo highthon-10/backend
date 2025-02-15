@@ -30,4 +30,12 @@ class DiaryController(
     fun save(@RequestBody request: DiaryRequest): Long? {
         return service.save(request)
     }
+
+    @Operation(summary = "개별 조회")
+    @GetMapping("/detail/{id}")
+    fun findById(
+        @PathVariable id: Long
+    ): Diary? {
+        return service.findById(id)
+    }
 }

@@ -13,4 +13,5 @@ class DiaryService(
 ) {
     fun findByUserId(userId: Long): List<Diary> = repository.findAllByUserId(userId)
     fun save(request: DiaryRequest) = repository.save(request.toEntity()).id
+    fun findById(id: Long): Diary? = repository.findById(id).orElse(null)
 }
