@@ -5,13 +5,14 @@ import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
+import org.example.hyodo.global.BaseTimeEntity
 
 @Entity
 class Diary(
     userId: Long,
     title: String,
     content: String,
-) {
+): BaseTimeEntity() {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null
 
