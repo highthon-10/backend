@@ -20,4 +20,4 @@ spring:
     open-in-view: false
 
 server:
-  address: 8000
+  port: 8000
