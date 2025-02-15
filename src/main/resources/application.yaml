@@ -1,18 +1,16 @@
 spring:
-  config:
-    import: env-server.yml
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/hyodo
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    username: root
+    password: tomsualvne
 
   jpa:
     database: mysql
     database-platform: org.hibernate.dialect.MySQLDialect
     generate-ddl: true
     hibernate:
-      ddl-auto: ${DDL_AUTO}
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
