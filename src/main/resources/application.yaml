@@ -1,6 +1,6 @@
-
-
 spring:
+  config:
+    import: env-server.yml
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/hyodo
@@ -19,10 +19,5 @@ spring:
         format_sql: true
     open-in-view: false
 
-  data:
-    redis:
-      host: localhost
-      port: 6379
-      password: ${REDIS_PASSWORD}
 server:
   address: 8000
